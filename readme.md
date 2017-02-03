@@ -38,7 +38,11 @@ Use build.bat to run each tasks in the predefined order.
 
 ## package.json
 
-Le fichier package.json doit exister et contenir au minimum ceci : 
+The  `package.json` file is used by the GULP scripts so that file should exists.   
+
+ `package.json` should be edited and the `gulp` node should be created like illustrated below. 
+
+Each task defined in the `gulp` folder will read their own configuration from `package.json`.
 
 ```json
 {
@@ -80,15 +84,15 @@ Le fichier package.json doit exister et contenir au minimum ceci :
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cavo789/markdown.git"
+    "url": "git+https://github.com/cavo789/PROJECT_NAME.git"
   },
   "keywords": [],
   "author": "christophe@aesecure.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cavo789/markdown/issues"
+    "url": "https://github.com/cavo789/PROJECT_NAME/issues"
   },
-  "homepage": "https://github.com/cavo789/markdown#readme",
+  "homepage": "https://github.com/cavo789/PROJECT_NAME#readme",
   "gulp": {    
     "editor": {
       "tab_size": 3,
