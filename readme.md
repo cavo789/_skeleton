@@ -35,6 +35,7 @@ Use build.bat to run each tasks in the predefined order.
 6. **jsmin** : minify the js files
 7. **jsbanner** : add a banner to .js files
 8. **phpbanner** : add a banner to .php files
+9. **chmod** : set the `dist` folder read-only
 
 ## package.json
 
@@ -190,7 +191,10 @@ Each task defined in the `gulp` folder will read their own configuration from `p
           "php": {
             "doit": 1
           }
-		}
+		},
+		"chmod": {
+          "doit": 1
+        }
       }      
     }
   }
