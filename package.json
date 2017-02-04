@@ -134,8 +134,7 @@
             "* @license   : <%= info.license %>",
             "* @url       : <%= info.homepage %>",
             "* @package   : <%= new Date().toISOString() %>", 
-            "*/",
-            "?>",
+            "*/"
 	      ],
           "js": {
             "doit": 1
