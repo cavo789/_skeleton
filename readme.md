@@ -1,6 +1,8 @@
+![Banner](images/banner.jpg)
+
 # Project skeleton
 
->  This project contains scripts to start more quickly a project.   The gulp folder contains a lot of scripts that will allow to beautify, lint, minify, ... files and generate the dist folder.
+> This project contains scripts to start more quickly a project. The gulp folder contains a lot of scripts that will allow to beautify, lint, minify, ... files and generate the dist folder.
 
 ## How to use
 
@@ -9,14 +11,14 @@
 3. Edit files composer.json and packages.json and fill in your project name, description, version, ...
 4. Open a command prompt ( `cmd.exe`) and go to the folder of your project (f.i. `cd c:\christophe\repository\project_name\`)
 5. Install gulp : type `npm install gulp`
-6. Then update dependencies : type `npm update`.  This step will take time and will install every libraries used by in tasks.
-7. You're ready.  To build your package, still in the command prompt, just type `build` to launch the `build.bat` script.   Every tasks can be disable by just editing your `package.json` file, see the  `doit` property in each `gulp` tasks node.  See below...
+6. Then update dependencies : type `npm update`. This step will take time and will install every libraries used by in tasks.
+7. You're ready. To build your package, still in the command prompt, just type `build` to launch the `build.bat` script. Every tasks can be disable by just editing your `package.json` file, see the `doit` property in each `gulp` tasks node. See below...
 
 ## package.json
 
-The  `package.json` file is used by the GULP scripts so that file should exists.   
+The `package.json` file is used by the GULP scripts so that file should exists.
 
- `package.json` should be edited and the `gulp` node should be created like illustrated below. 
+`package.json` should be edited and the `gulp` node should be created like illustrated below.
 
 Each task defined in the `gulp` folder will read their own configuration from `package.json`.
 
@@ -69,7 +71,7 @@ Each task defined in the `gulp` folder will read their own configuration from `p
     "url": "https://github.com/cavo789/PROJECT_NAME/issues"
   },
   "homepage": "https://github.com/cavo789/PROJECT_NAME#readme",
-  "gulp": {    
+  "gulp": {
     "editor": {
       "tab_size": 3,
       "encoding": "utf-8"
@@ -82,18 +84,18 @@ Each task defined in the `gulp` folder will read their own configuration from `p
       "target": "dist"
     },
     "tasks": {
-	  "backup": {
-	    "doit": 1
-	  },
-	  "source": {
-	    "code_quality": {
+      "backup": {
+        "doit": 1
+      },
+      "source": {
+        "code_quality": {
           "sniffer": {
             "doit": 1
           },
           "mess_detector": {
             "doit": 1
           }
-		},
+        },
         "lint": {
           "css": {
             "doit": 1
@@ -108,7 +110,7 @@ Each task defined in the `gulp` folder will read their own configuration from `p
             "doit": 1
           }
         },
-		"beautifier": {
+        "beautifier": {
           "css": {
             "doit": 1
           },
@@ -127,7 +129,7 @@ Each task defined in the `gulp` folder will read their own configuration from `p
         "delete": {
           "doit": 1
         },
-		"copy": {
+        "copy": {
           "doit": 1
         },
         "removedebug": {
@@ -137,8 +139,8 @@ Each task defined in the `gulp` folder will read their own configuration from `p
           "php": {
             "doit": 1
           }
-		},
-		"minify": {
+        },
+        "minify": {
           "css": {
             "doit": 1
           },
@@ -146,31 +148,31 @@ Each task defined in the `gulp` folder will read their own configuration from `p
             "doit": 1
           }
         },
-		"banner": {
-		  "header": [
-	        "<?php",   
+        "banner": {
+          "header": [
+            "<?php",
             "/**",
             "* <%= info.name %> - <%= info.description %>",
             "* @version   : <%= info.version %>",
             "* @author    : <%= info.author %>",
             "* @license   : <%= info.license %>",
             "* @url       : <%= info.homepage %>",
-            "* @package   : <%= new Date().toISOString() %>", 
+            "* @package   : <%= new Date().toISOString() %>",
             "*/",
             "?>",
-			""
-	      ],
+            ""
+          ],
           "js": {
             "doit": 1
           },
           "php": {
             "doit": 1
           }
-		},
-		"chmod": {
+        },
+        "chmod": {
           "doit": 1
         }
-      }      
+      }
     }
   }
 }
@@ -194,7 +196,7 @@ Use `build.bat` to run each tasks in the predefined order.
 
 ##### 1. Main
 
-1. **backup** : take a backup of all files under the source folder (called `src`).  The zip file  will derived from the package.json file, use `name` and `version` and create f.i. project_v1.0-20170203.zip) 
+1. **backup** : take a backup of all files under the source folder (called `src`). The zip file will derived from the package.json file, use `name` and `version` and create f.i. project_v1.0-20170203.zip)
 
 ##### 2. SRC
 
@@ -223,5 +225,4 @@ Use `build.bat` to run each tasks in the predefined order.
 
 ## Credits
 
-Christophe Avonture | [https://www.aesecure.com](https://www.aesecure.com) 
-
+Christophe Avonture | [https://www.aesecure.com](https://www.aesecure.com)
